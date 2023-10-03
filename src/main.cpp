@@ -57,13 +57,9 @@ void setup() {
 } 
 
 void loop() {
-    if (mpu.update()) {
-        static uint32_t prev_ms = millis();
-        if (millis() > prev_ms + 25) {
-            print_roll_pitch_yaw();
-            prev_ms = millis();
-        }
-    }
+  delay(100);
+  mpu.calibrateAccelGyro();
+  print_accel_calibration();
 }
 
 void print_roll_pitch_yaw() {
@@ -89,15 +85,19 @@ uint8_t readByte(uint8_t address, uint8_t subAddress, WireType& wire = Wire) {
     return data;
 }
 
-void print_calibration() {
-    Serial.println("< calibration parameters >");
-    Serial.println("accel bias [g]: ");
+void print_accel_calibration() {
     Serial.print(mpu.getAccBiasX() * 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
     Serial.print(", ");
     Serial.print(mpu.getAccBiasY() * 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
     Serial.print(", ");
     Serial.print(mpu.getAccBiasZ() * 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
     Serial.println();
+}
+
+void print_calibration() {
+    Serial.println("< calibration parameters >");
+    Serial.println("accel bias [g]: ");
+    print_accel_calibration();
     Serial.println("gyro bias [deg/s]: ");
     Serial.print(mpu.getGyroBiasX() / (float)MPU9250::CALIB_GYRO_SENSITIVITY);
     Serial.print(", ");

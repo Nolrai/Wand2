@@ -1,0 +1,202 @@
+Press 's' to start calibration.
+Press 's' to start calibration.
+Press 's' to start calibration.
+Press 's' to start calibration.
+Press 's' to start calibration.
+Press 's' to start calibration.
+Press 's' to start calibration.
+Press 's' to start calibration.
+Incoming Byte: 115
+'s' detected, starting calibration.
+Accel Gyro calibration will start in 3sec.
+Please leave the device still on the flat plane.
+Mag calibration will start in 3sec.
+Please Wave device in a figure eight until done.
+Mag Factory Calibration Values: 
+X-Axis sensitivity offset value 1.18
+Y-Axis sensitivity offset value 1.18
+Z-Axis sensitivity offset value 1.13
+Mag Calibration: Wave device in a figure eight until done!
+mag x min/max:
+0
+440
+mag y min/max:
+-460
+10
+mag z min/max:
+-1047
+0
+Mag Calibration done!
+AK8963 mag biases (mG)
+387.85, -396.66, -888.33
+AK8963 mag scale (mG)
+1.46, 1.36, 0.63
+Mag Factory Calibration Values: 
+X-Axis sensitivity offset value 1.18
+Y-Axis sensitivity offset value 1.18
+Z-Axis sensitivity offset value 1.13
+< calibration parameters >
+accel bias [g]: 
+20.03, -26.83, 44.24
+gyro bias [deg/s]: 
+-2.06, 2.40, -1.07
+mag bias [mG]: 
+387.85, -396.66, -888.33
+mag scale []: 
+1.46, 1.36, 0.63
+Yaw, Pitch, Roll: -7.03, 1.79, -0.93
+Yaw, Pitch, Roll: -5.97, 4.00, -1.56
+Yaw, Pitch, Roll: -5.26, 5.53, -2.07
+Yaw, Pitch, Roll: -4.17, 5.96, -3.25
+Yaw, Pitch, Roll: -2.64, 8.88, -3.47
+Yaw, Pitch, Roll: -1.10, 12.79, -2.66
+Yaw, Pitch, Roll: 0.87, 15.35, -2.01
+Yaw, Pitch, Roll: 2.82, 18.92, -0.46
+Yaw, Pitch, Roll: 4.10, 22.37, 1.32
+Yaw, Pitch, Roll: 4.19, 25.61, 2.65
+Yaw, Pitch, Roll: 5.74, 30.27, 4.85
+Yaw, Pitch, Roll: 8.30, 34.34, 7.05
+Yaw, Pitch, Roll: 10.73, 38.02, 9.80
+Yaw, Pitch, Roll: 13.33, 42.11, 13.94
+Yaw, Pitch, Roll: 16.33, 45.77, 18.01
+Yaw, Pitch, Roll: 18.67, 47.84, 21.68
+Yaw, Pitch, Roll: 19.02, 49.08, 23.60
+Yaw, Pitch, Roll: 17.56, 49.46, 23.15
+Yaw, Pitch, Roll: 13.86, 48.37, 20.59
+Yaw, Pitch, Roll: 8.08, 45.21, 14.11
+Yaw, Pitch, Roll: -2.71, 39.99, 4.01
+Yaw, Pitch, Roll: -11.45, 31.13, -4.65
+Yaw, Pitch, Roll: -14.44, 24.43, -8.11
+Yaw, Pitch, Roll: -16.39, 19.71, -10.65
+Yaw, Pitch, Roll: -17.20, 15.36, -13.34
+Yaw, Pitch, Roll: -17.42, 12.68, -16.11
+Yaw, Pitch, Roll: -17.25, 10.44, -19.24
+Yaw, Pitch, Roll: -15.59, 7.40, -23.03
+Yaw, Pitch, Roll: -14.75, 5.74, -26.23
+Yaw, Pitch, Roll: -13.00, 5.84, -28.36
+Yaw, Pitch, Roll: -10.26, 6.19, -29.40
+Yaw, Pitch, Roll: -8.02, 7.46, -30.49
+Yaw, Pitch, Roll: -5.64, 9.12, -31.86
+Yaw, Pitch, Roll: -3.17, 10.66, -32.63
+Yaw, Pitch, Roll: 0.12, 11.55, -32.64
+Yaw, Pitch, Roll: 6.48, 10.47, -34.53
+Yaw, Pitch, Roll: 12.98, 11.76, -34.07
+Yaw, Pitch, Roll: 14.49, 11.91, -34.60
+Yaw, Pitch, Roll: 15.15, 11.94, -34.38
+Yaw, Pitch, Roll: 13.53, 15.49, -32.81
+Yaw, Pitch, Roll: 15.20, 16.16, -31.11
+Yaw, Pitch, Roll: 18.96, 13.68, -29.43
+Yaw, Pitch, Roll: 22.26, 12.17, -27.60
+Yaw, Pitch, Roll: 24.71, 9.38, -27.12
+Yaw, Pitch, Roll: 28.73, 4.96, -25.80
+Yaw, Pitch, Roll: 31.56, 4.32, -24.22
+Yaw, Pitch, Roll: 33.98, 4.28, -22.74
+Yaw, Pitch, Roll: 36.96, -0.42, -19.72
+Yaw, Pitch, Roll: 39.15, -2.27, -16.09
+Yaw, Pitch, Roll: 40.59, -2.29, -13.82
+Yaw, Pitch, Roll: 41.65, -2.52, -12.03
+Yaw, Pitch, Roll: 42.47, -3.92, -9.91
+Yaw, Pitch, Roll: 42.96, -5.95, -8.47
+Yaw, Pitch, Roll: 43.54, -8.06, -8.02
+Yaw, Pitch, Roll: 44.28, -8.96, -7.62
+Yaw, Pitch, Roll: 45.24, -9.18, -7.77
+Yaw, Pitch, Roll: 45.80, -9.28, -7.53
+Yaw, Pitch, Roll: 46.40, -8.25, -7.15
+Yaw, Pitch, Roll: 48.60, -7.16, -7.27
+Yaw, Pitch, Roll: 50.76, -6.92, -7.71
+Yaw, Pitch, Roll: 51.82, -6.19, -7.27
+Yaw, Pitch, Roll: 52.06, -5.62, -6.46
+Yaw, Pitch, Roll: 53.71, -5.98, -6.61
+Yaw, Pitch, Roll: 56.56, -8.14, -6.74
+Yaw, Pitch, Roll: 59.63, -11.26, -7.06
+Yaw, Pitch, Roll: 60.56, -20.31, -5.77
+Yaw, Pitch, Roll: 61.12, -18.97, -5.18
+Yaw, Pitch, Roll: 61.91, -17.59, -5.13
+Yaw, Pitch, Roll: 63.55, -17.24, -5.51
+Yaw, Pitch, Roll: 64.43, -16.28, -5.17
+Yaw, Pitch, Roll: 65.98, -15.58, -5.15
+Yaw, Pitch, Roll: 68.51, -14.97, -5.70
+Yaw, Pitch, Roll: 70.62, -13.82, -5.39
+Yaw, Pitch, Roll: 72.24, -13.92, -5.62
+Yaw, Pitch, Roll: 73.70, -13.78, -5.78
+Yaw, Pitch, Roll: 74.65, -12.44, -5.71
+Yaw, Pitch, Roll: 76.20, -12.68, -6.22
+Yaw, Pitch, Roll: 77.46, -12.63, -5.92
+Yaw, Pitch, Roll: 78.92, -12.45, -5.98
+Yaw, Pitch, Roll: 80.15, -12.24, -5.70
+Yaw, Pitch, Roll: 81.63, -12.47, -6.02
+Yaw, Pitch, Roll: 83.09, -12.43, -6.34
+Yaw, Pitch, Roll: 84.42, -11.97, -6.59
+Yaw, Pitch, Roll: 85.88, -11.96, -6.73
+Yaw, Pitch, Roll: 87.25, -11.45, -6.81
+Yaw, Pitch, Roll: 88.46, -10.81, -6.74
+Yaw, Pitch, Roll: 89.88, -10.92, -7.27
+Yaw, Pitch, Roll: 90.79, -10.58, -6.72
+Yaw, Pitch, Roll: 92.03, -10.60, -6.56
+Yaw, Pitch, Roll: 93.36, -10.38, -6.70
+Yaw, Pitch, Roll: 94.64, -10.43, -6.81
+Yaw, Pitch, Roll: 95.96, -10.41, -6.97
+Yaw, Pitch, Roll: 97.35, -10.40, -7.09
+Yaw, Pitch, Roll: 98.58, -10.11, -7.00
+Yaw, Pitch, Roll: 99.95, -9.66, -7.30
+Yaw, Pitch, Roll: 101.00, -9.56, -6.98
+Yaw, Pitch, Roll: 102.01, -9.24, -6.58
+Yaw, Pitch, Roll: 102.88, -8.60, -6.28
+Yaw, Pitch, Roll: 103.96, -8.62, -6.43
+Yaw, Pitch, Roll: 105.06, -8.66, -6.58
+Yaw, Pitch, Roll: 106.24, -8.54, -7.03
+Yaw, Pitch, Roll: 107.06, -8.27, -6.66
+Yaw, Pitch, Roll: 108.03, -8.00, -6.42
+Yaw, Pitch, Roll: 109.14, -7.93, -6.47
+Yaw, Pitch, Roll: 110.19, -7.72, -6.31
+Yaw, Pitch, Roll: 111.35, -7.64, -6.56
+Yaw, Pitch, Roll: 112.53, -7.73, -6.75
+Yaw, Pitch, Roll: 113.43, -7.61, -6.54
+Yaw, Pitch, Roll: 114.45, -7.42, -6.47
+Yaw, Pitch, Roll: 115.38, -7.42, -6.38
+Yaw, Pitch, Roll: 116.46, -7.37, -6.42
+Yaw, Pitch, Roll: 117.45, -7.23, -6.46
+Yaw, Pitch, Roll: 118.30, -6.74, -5.95
+Yaw, Pitch, Roll: 119.18, -6.65, -5.84
+Yaw, Pitch, Roll: 120.16, -6.64, -6.02
+Yaw, Pitch, Roll: 121.18, -6.59, -6.25
+Yaw, Pitch, Roll: 122.30, -6.58, -6.53
+Yaw, Pitch, Roll: 122.96, -6.36, -6.02
+Yaw, Pitch, Roll: 123.70, -6.18, -5.83
+Yaw, Pitch, Roll: 124.60, -6.17, -5.84
+Yaw, Pitch, Roll: 125.25, -5.91, -5.66
+Yaw, Pitch, Roll: 125.97, -5.79, -5.41
+Yaw, Pitch, Roll: 126.42, -5.42, -4.75
+Yaw, Pitch, Roll: 127.29, -5.40, -5.00
+Yaw, Pitch, Roll: 127.99, -5.23, -4.81
+Yaw, Pitch, Roll: 128.83, -5.26, -4.97
+Yaw, Pitch, Roll: 129.65, -5.18, -4.95
+Yaw, Pitch, Roll: 130.28, -4.98, -4.63
+Yaw, Pitch, Roll: 130.97, -4.84, -4.57
+Yaw, Pitch, Roll: 131.81, -4.91, -4.75
+Yaw, Pitch, Roll: 132.48, -4.80, -4.67
+Yaw, Pitch, Roll: 133.37, -4.88, -4.95
+Yaw, Pitch, Roll: 134.35, -4.95, -5.41
+Yaw, Pitch, Roll: 134.95, -4.73, -4.99
+Yaw, Pitch, Roll: 135.64, -4.68, -4.85
+Yaw, Pitch, Roll: 136.46, -4.69, -5.03
+Yaw, Pitch, Roll: 136.99, -4.47, -4.68
+Yaw, Pitch, Roll: 137.97, -4.52, -5.17
+Yaw, Pitch, Roll: 138.72, -4.49, -5.17
+Yaw, Pitch, Roll: 139.24, -4.29, -4.73
+Yaw, Pitch, Roll: 139.81, -4.22, -4.64
+Yaw, Pitch, Roll: 140.27, -4.04, -4.24
+Yaw, Pitch, Roll: 140.73, -3.89, -3.81
+Yaw, Pitch, Roll: 141.35, -3.92, -4.00
+Yaw, Pitch, Roll: 141.91, -3.92, -3.99
+Yaw, Pitch, Roll: 142.05, -3.71, -3.49
+Yaw, Pitch, Roll: 142.52, -3.67, -3.44
+Yaw, Pitch, Roll: 142.63, -3.47, -2.92
+Yaw, Pitch, Roll: 142.98, -3.40, -2.78
+Yaw, Pitch, Roll: 143.29, -3.29, -2.56
+Yaw, Pitch, Roll: 143.67, -3.28, -2.49
+Yaw, Pitch, Roll: 144.28, -3.22, -2.96
+Yaw, Pitch, Roll: 144.79, -3.24, -3.05
+Yaw, Pitch, Roll: 145.10, -3.20, -2.85
+Yaw, Pitch, Roll: 145.69, -3.28, -3.12
+Yaw, Pitch, Roll: 146.07, -3.19, -2.98

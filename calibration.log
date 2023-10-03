@@ -1,0 +1,19 @@
+< calibration parameters >
+accel bias [g]: 
+20.03, -26.83, 44.24
+gyro bias [deg/s]: 
+-2.06, 2.40, -1.07
+mag bias [mG]: 
+387.85, -396.66, -888.33
+mag scale []: 
+1.46, 1.36, 0.63
+
+< calibration parameters >
+accel bias [g]: 
+-42.69, -0.61, 42.53
+gyro bias [deg/s]: 
+-2.05, 2.37, -1.07
+mag bias [mG]: 
+407.24, -396.66, -881.54
+mag scale []: 
+1.38, 1.42, 0.64

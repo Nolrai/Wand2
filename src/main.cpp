@@ -5,6 +5,7 @@
 MPU9250 mpu;
 
 // forward declarations
+void print_accel_calibration(void);
 void print_calibration(void);
 void print_roll_pitch_yaw(void);
 void check_connections(void);

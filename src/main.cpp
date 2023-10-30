@@ -1,6 +1,9 @@
 #include <Arduino.h>
 
 #include "MPU9250.h"
+#include <optional>
+
+using std::optional;
 
 MPU9250 mpu;
 
@@ -94,6 +97,93 @@ void print_accel_calibration() {
     Serial.print(mpu.getAccBiasZ() * 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
     Serial.println();
 }
+
+struct float3D {
+  public:
+    float x, y, z;
+};
+
+float percentDifference (float a, float b) {
+  return ((a - b) * 2.0f / (max(abs(a), abs(b))))/10.0f; // scale down so when we print and scale up 1000 it is in percents. 
+}
+
+class calibration {
+  public:
+    calibration (const MPU9250 &mpu) {
+
+      accBias->x = mpu.getAccBiasX();
+      accBias->y = mpu.getAccBiasY();
+      accBias->y = mpu.getAccBiasZ();
+
+      gyroBias->x = mpu.getGyroBiasX();
+      gyroBias->y = mpu.getGyroBiasY();
+      gyroBias->y = mpu.getGyroBiasZ();
+
+      magBias->x = mpu.getMagBiasX();
+      magBias->y = mpu.getMagBiasY();
+      magBias->y = mpu.getMagBiasZ();
+
+      magScale->x = mpu.getMagScaleX();
+      magScale->y = mpu.getMagScaleY();
+      magScale->y = mpu.getMagScaleZ();
+
+    }
+
+    calibration getCalibration(const MPU9250 &mpu, bool has_gyro, bool has_mag) {
+      calibration c(mpu);
+      if (!has_gyro) {
+        c.gyroBias.reset();
+      }
+      if (!has_gyro) {
+        c.gyroBias.reset();
+      }
+      if (!has_mag) {
+        c.magBias.reset();
+        c.magScale.reset();
+      }
+      return calibration(mpu);
+    }
+
+    const void setCalibration (MPU9250* mpu) {
+      if (accBias) {
+        mpu->setAccBias(accBias->x, accBias->y, accBias->z);
+      };
+      if (gyroBias) {
+        mpu->setGyroBias(gyroBias->x, gyroBias->y, gyroBias->z);
+      }
+      if (magBias) {
+        mpu->setMagBias(magBias->x, magBias->y, magBias->z);
+      }
+      if (magScale) {
+        mpu->setMagScale(magScale->x, magScale->y, magScale->z);
+      }
+    }
+
+  private:
+
+    calibration (const calibration a, const calibration b) {
+      accBias->x = percentDifference(a.accBias->x, b.accBias->x);
+      accBias->y = percentDifference(a.accBias->y, b.accBias->y);;
+      accBias->y = percentDifference(a.accBias->y, b.accBias->y);;
+
+      gyroBias->x = percentDifference(a.gyroBias->x, b.gyroBias->x);
+      gyroBias->y = percentDifference(a.gyroBias->y, b.gyroBias->y);
+      gyroBias->y = percentDifference(a.gyroBias->y, b.gyroBias->y);
+
+      magBias->x = percentDifference(a.magBias->x, b.magBias->x);
+      magBias->y = percentDifference(a.magBias->y, b.magBias->y);
+      magBias->y = percentDifference(a.magBias->y, b.magBias->y);
+
+      magScale->x = percentDifference(a.magScale->x, b.magScale->x);
+      magScale->y = percentDifference(a.magScale->y, b.magScale->y);
+      magScale->y = percentDifference(a.magScale->y, b.magScale->y);
+    }
+ 
+    optional<float3D> accBias;
+    optional<float3D> gyroBias;
+    optional<float3D> magBias;
+    optional<float3D> magScale;
+};
 
 void print_calibration() {
     Serial.println("< calibration parameters >");

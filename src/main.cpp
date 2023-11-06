@@ -89,26 +89,28 @@ uint8_t readByte(uint8_t address, uint8_t subAddress, WireType& wire = Wire) {
     return data;
 }
 
-void print_accel_calibration() {
-    Serial.print(mpu.getAccBiasX() * 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
-    Serial.print(", ");
-    Serial.print(mpu.getAccBiasY() * 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
-    Serial.print(", ");
-    Serial.print(mpu.getAccBiasZ() * 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
-    Serial.println();
-}
-
 struct float3D {
-  public:
-    float x, y, z;
+public:
+  float x, y, z;
+
+  size_t printToWithScale(Print &p, float scale = 1) const {
+    size_t length = 0;
+    length += p.print(x * scale);
+    length += p.print(", ");
+    length += p.print(y * scale);
+    length += p.print(", ");
+    length += p.print(z * scale);
+    length += p.println();
+  }
 };
 
 float percentDifference (float a, float b) {
   return ((a - b) * 2.0f / (max(abs(a), abs(b))))/10.0f; // scale down so when we print and scale up 1000 it is in percents. 
 }
 
-class calibration {
+class calibration : public Printable {
   public:
+ 
     calibration (const MPU9250 &mpu) {
 
       accBias->x = mpu.getAccBiasX();
@@ -159,9 +161,37 @@ class calibration {
       }
     }
 
+    virtual size_t printTo(Print &p) const {
+      size_t length = 0;
+      length += p.println("< calibration parameters >");
+      length += p.println("accel bias [g]: ");
+      length += accBias->printToWithScale(p, 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
+      length += p.println("gyro bias [deg/s]: ");
+      length += gyroBias->printToWithScale(p, 1.f / (float)MPU9250::CALIB_GYRO_SENSITIVITY);
+      length += p.println("mag bias [mG]: ");
+      length += magBias->printToWithScale(p);
+      length += p.println("mag scale []: ");
+      length += magScale->printToWithScale(p);
+    }
+
+    void printPercentDiff (Print &p, const calibration &b) {
+      calibration cmp(*this, b);
+      size_t length = 0;
+      length += p.println("< calibration parameters - Percent Change >");
+      length += p.println("accel bias [g]: ");
+      length += accBias->printToWithScale(p);
+      length += p.println("gyro bias [deg/s]: ");
+      length += gyroBias->printToWithScale(p);
+      length += p.println("mag bias [mG]: ");
+      length += magBias->printToWithScale(p);
+      length += p.println("mag scale []: ");
+      length += magScale->printToWithScale(p);
+
+    }
+
   private:
 
-    calibration (const calibration a, const calibration b) {
+    calibration (const calibration &a, const calibration &b) {
       accBias->x = percentDifference(a.accBias->x, b.accBias->x);
       accBias->y = percentDifference(a.accBias->y, b.accBias->y);;
       accBias->y = percentDifference(a.accBias->y, b.accBias->y);;
@@ -185,31 +215,8 @@ class calibration {
     optional<float3D> magScale;
 };
 
-void print_calibration() {
-    Serial.println("< calibration parameters >");
-    Serial.println("accel bias [g]: ");
-    print_accel_calibration();
-    Serial.println("gyro bias [deg/s]: ");
-    Serial.print(mpu.getGyroBiasX() / (float)MPU9250::CALIB_GYRO_SENSITIVITY);
-    Serial.print(", ");
-    Serial.print(mpu.getGyroBiasY() / (float)MPU9250::CALIB_GYRO_SENSITIVITY);
-    Serial.print(", ");
-    Serial.print(mpu.getGyroBiasZ() / (float)MPU9250::CALIB_GYRO_SENSITIVITY);
-    Serial.println();
-    Serial.println("mag bias [mG]: ");
-    Serial.print(mpu.getMagBiasX());
-    Serial.print(", ");
-    Serial.print(mpu.getMagBiasY());
-    Serial.print(", ");
-    Serial.print(mpu.getMagBiasZ());
-    Serial.println();
-    Serial.println("mag scale []: ");
-    Serial.print(mpu.getMagScaleX());
-    Serial.print(", ");
-    Serial.print(mpu.getMagScaleY());
-    Serial.print(", ");
-    Serial.print(mpu.getMagScaleZ());
-    Serial.println();
+float format_acc_bias (float raw) {
+  return (raw * 1000.f / (float)MPU9250::CALIB_ACCEL_SENSITIVITY);
 }
 
 template <typename WireType = TwoWire>
